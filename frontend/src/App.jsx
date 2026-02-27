@@ -1,23 +1,9 @@
-import { useState } from "react";
+import ChatBox from "./components/ChatBox";
 
 function App() {
-  const [message, setMessage] = useState("");
-
   return (
-    <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>MindCare+ Mental Health AI</h1>
-
-      <textarea
-        rows="6"
-        cols="60"
-        placeholder="Type how you feel..."
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
-
-      <br /><br />
-
-      <button>Analyze</button>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <ChatBox />
     </div>
   );
 }
